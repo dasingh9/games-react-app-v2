@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { Spinner } from './components/Spinner'
 import { PageHeader } from './components/PageHeader'
-import { GamesList } from './components/GamesList'
+import GamesComponent from './components/GamesComponent'
+import { Flexbox } from './components/Flexbox'
 import './App.css'
 
 
@@ -37,8 +38,8 @@ function App() {
   return (
     <>
     <PageHeader />
-    
-    <GamesList />
+
+    <GamesComponent />
 
     </>
   )

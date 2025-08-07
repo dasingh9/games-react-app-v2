@@ -1,6 +1,12 @@
-export function GameCard({ game }) {
+export function GameCard({ game, children }) {
+
+    const cardStyle = { 
+        backgroundColor:"white",
+        border: "5px solid green"
+    };
+
     return (
-        <div className="card">
+        <div className="card" style={cardStyle}>
             <img src={game.thumbnail} alt="Game Image" />
             <div className="card-content">
                 <h3 className="game-title">{game.title}</h3>

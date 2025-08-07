@@ -27,7 +27,7 @@ h1 {
   margin: auto;
 }
 
-.games-flex-container {
+.flex-container {
   margin: 20px;
   display: flex;
   flex-wrap: wrap;
