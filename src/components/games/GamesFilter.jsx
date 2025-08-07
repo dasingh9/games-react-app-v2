@@ -1,4 +1,4 @@
-import { Flexbox } from "./Flexbox";
+import { Flexbox } from "../shared/Flexbox";
 
 export function GamesFilter() {
     return (

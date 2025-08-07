@@ -1,12 +1,12 @@
 import { GameCard } from "./GameCard";
-import { Flexbox } from "./Flexbox";
+import { Flexbox } from "../shared/Flexbox";
 
 export function GamesList({games, displayType}) {
 
     if(displayType=="cards") {
         return (
             <Flexbox>
-                {games.map(x => (<GameCard game={x} />))}
+                {games.map(x => (<GameCard key={x.id} game={x} />))}
             </Flexbox>
         )
     }

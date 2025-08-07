@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import { Spinner } from './components/Spinner'
+import { Spinner } from './components/shared/Spinner'
 import { PageHeader } from './components/PageHeader'
-import GamesComponent from './components/GamesComponent'
-import { Flexbox } from './components/Flexbox'
+import GamesComponent from './components/games/GamesComponent'
+import { Flexbox } from './components/shared/Flexbox'
 import './App.css'
-
+import { Container } from './components/shared/container/Container'
 
 function ExampleComponent() {
   return (
@@ -17,7 +17,7 @@ function ExampleComponent() {
   )
 }
 
-function Spiderman({name, version}) {
+function Spiderman({ name, version }) {
   const spiderman = {
     name: 'Spiderman', alterEgo: 'Peter Parker', catchPhrase: 'With great power comes great responsibility'
   };
@@ -34,12 +34,27 @@ function Spiderman({name, version}) {
 }
 
 function App() {
-  
+
   return (
     <>
-    <PageHeader />
+      <PageHeader />
 
-    <GamesComponent />
+      <GamesComponent></GamesComponent>
+
+      <br />
+      <Flexbox>
+        <Container header="Create Game" style={{ maxWidth: '400px', margin: '0 auto', backgroundColor: '#fff' }}>
+          Form for create a game
+        </Container>
+        
+        <Container header="Registration Form" style={{ maxWidth: '600px', margin: '0 auto', backgroundColor: '#fff' }}>
+          Form for doing something else!
+        </Container>
+
+        <Container header="Registration Form" style={{ maxWidth: '400px', margin: '0 auto', backgroundColor: '#fff' }}>
+          Form for doing something else!
+        </Container>
+      </Flexbox>
 
     </>
   )

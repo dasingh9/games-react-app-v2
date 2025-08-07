@@ -1,5 +1,5 @@
 import { GamesList } from "./GamesList";
-import GameService from "../services/GameService";
+import GameService from "../../services/GameService";
 import { GamesFilter } from "./GamesFilter";
 
 export default function GamesComponent() {
