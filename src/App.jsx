@@ -51,7 +51,7 @@ function App() {
           Form for doing something else!
         </Container>
 
-        <Container header="Registration Form" style={{ maxWidth: '400px', margin: '0 auto', backgroundColor: '#fff' }}>
+        <Container header="Other Form" style={{ maxWidth: '400px', margin: '0 auto', backgroundColor: '#fff' }}>
           Form for doing something else!
         </Container>
       </Flexbox>
