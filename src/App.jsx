@@ -7,6 +7,7 @@ import GamesComponent from './components/games/GamesComponent'
 import { Flexbox } from './components/shared/Flexbox'
 import './App.css'
 import { Container } from './components/shared/container/Container'
+import MoodChanger from './components/MoodChanger'
 
 function ExampleComponent() {
   return (
@@ -37,24 +38,10 @@ function App() {
 
   return (
     <>
+
       <PageHeader />
 
       <GamesComponent></GamesComponent>
-
-      <br />
-      <Flexbox>
-        <Container header="Create Game" style={{ maxWidth: '400px', margin: '0 auto', backgroundColor: '#fff' }}>
-          Form for create a game
-        </Container>
-        
-        <Container header="Registration Form" style={{ maxWidth: '600px', margin: '0 auto', backgroundColor: '#fff' }}>
-          Form for doing something else!
-        </Container>
-
-        <Container header="Other Form" style={{ maxWidth: '400px', margin: '0 auto', backgroundColor: '#fff' }}>
-          Form for doing something else!
-        </Container>
-      </Flexbox>
 
     </>
   )
