@@ -1,19 +1,22 @@
 import { useNavigate, Outlet } from 'react-router-dom';
 import { useUserContext } from "../context/UserContext";
+import { Flexbox } from '../components/shared/Flexbox';
 
 export default function DashboardPage() {
     // built-in hook in React Router DOM, returns a function
     const navigate = useNavigate();
     return (
-        <div className="DashboardPage componentBox">
-            <h1>Dashboard</h1>
-            
-            {/* Will render either <DashboardMessages> when the URL is "/dash/messages", <DashboardTasks> at "/dash/tasks", or null if it is "/dash" */}
-            <button onClick={() => navigate('/dash/tasks')}>Show Tasks</button>
-            <button onClick={() => navigate('/dash/messages')}>Show Messages</button>
-            <button onClick={() => navigate(-1)}>Back</button>
-            <Outlet /> {/* see next slide */}
-        </div>
+        <Flexbox>
+            <div className="DashboardPage componentBox">
+                <h1>Dashboard</h1>
+                
+                {/* Will render either <DashboardMessages> when the URL is "/dash/messages", <DashboardTasks> at "/dash/tasks", or null if it is "/dash" */}
+                <button onClick={() => navigate('/dash/tasks')}>Show Tasks</button>
+                <button onClick={() => navigate('/dash/messages')}>Show Messages</button>
+                <button onClick={() => navigate(-1)}>Back</button>
+                <Outlet /> {/* see next slide */}
+            </div>
+        </Flexbox>
     )
 }
 // ++ Move the <Outlet/> below the buttons and observe the change
