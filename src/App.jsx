@@ -13,6 +13,8 @@ import Clock from './components/Clock'
 import RefCounter from './components/RefCounter'
 import { LoginForm } from './pages/LoginForm'
 import AppRoutes from './routes/AppRoutes'
+import { UserProvider } from './context/UserContext'
+import NavBar from './components/Navbar'
 
 function ExampleComponent() {
   return (
@@ -43,10 +45,12 @@ function App() {
 
   return (
     <>
-      <PageHeader />
-      <AppRoutes></AppRoutes>
+        <UserProvider>
+            <NavBar></NavBar>
+            <AppRoutes></AppRoutes>
+        </UserProvider>
     </>
-  )
+    )
 
 }
 

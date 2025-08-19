@@ -33,7 +33,9 @@ function AppRoutes(props) {
                 <Route path="messages" element={<DashboardMessages />} />
                 <Route path="tasks" element={<DashboardTasks />} />
             </Route>
+
             <Route path='/about' element={<AboutPage {...props} />} />
+            
             {/* special route to handle if none of the above match */}
             <Route path="*" element={<PageNotFound />} />
         </Routes>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useUserContext } from "../context/UserContext";
 import { useNavigate } from 'react-router-dom';
 import GamesComponent from "../components/games/GamesComponent";
@@ -10,7 +10,12 @@ import Clock from "../components/Clock";
 export function LoginForm() {
     const { currentUser, handleUpdateUser } = useUserContext();
     const [userLoginStatusMessage, setUserLoginStatusMessage] = useState('');
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        if(currentUser?.email)
+            navigate("/home");
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,7 +27,7 @@ export function LoginForm() {
             const user = UserService.authenticate(inputUser.email, inputUser.password);
             setUserLoginStatusMessage("Successfully logged in");
             handleUpdateUser(user);
-            //navigate("/home");
+            navigate("/home");
         }
         catch (error) {
             setUserLoginStatusMessage("Login failed");
