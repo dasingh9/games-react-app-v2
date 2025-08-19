@@ -8,6 +8,9 @@ import { Flexbox } from './components/shared/Flexbox'
 import './App.css'
 import { Container } from './components/shared/container/Container'
 import MoodChanger from './components/MoodChanger'
+import ExplodingBomb from './components/ExplodingBomb'
+import Clock from './components/Clock'
+import RefCounter from './components/RefCounter'
 
 function ExampleComponent() {
   return (
@@ -38,11 +41,8 @@ function App() {
 
   return (
     <>
-
       <PageHeader />
-
       <GamesComponent></GamesComponent>
-
     </>
   )
 
