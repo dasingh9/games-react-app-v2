@@ -11,6 +11,7 @@ import MoodChanger from './components/MoodChanger'
 import ExplodingBomb from './components/ExplodingBomb'
 import Clock from './components/Clock'
 import RefCounter from './components/RefCounter'
+import { LoginForm } from './components/LoginForm'
 
 function ExampleComponent() {
   return (
@@ -42,7 +43,7 @@ function App() {
   return (
     <>
       <PageHeader />
-      <GamesComponent></GamesComponent>
+      <LoginForm></LoginForm>
     </>
   )
 
