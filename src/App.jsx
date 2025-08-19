@@ -11,7 +11,8 @@ import MoodChanger from './components/MoodChanger'
 import ExplodingBomb from './components/ExplodingBomb'
 import Clock from './components/Clock'
 import RefCounter from './components/RefCounter'
-import { LoginForm } from './components/LoginForm'
+import { LoginForm } from './pages/LoginForm'
+import AppRoutes from './routes/AppRoutes'
 
 function ExampleComponent() {
   return (
@@ -43,7 +44,7 @@ function App() {
   return (
     <>
       <PageHeader />
-      <LoginForm></LoginForm>
+      <AppRoutes></AppRoutes>
     </>
   )
 

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useUserContext } from "../context/UserContext";
 import { useNavigate } from 'react-router-dom';
-import GamesComponent from "./games/GamesComponent";
+import GamesComponent from "../components/games/GamesComponent";
 import UserService from '../services/UserService';
-import { Flexbox } from "./shared/Flexbox";
-import { Container } from "./shared/container/Container";
-import Clock from "./Clock";
+import { Flexbox } from "../components/shared/Flexbox";
+import { Container } from "../components/shared/container/Container";
+import Clock from "../components/Clock";
 
 export function LoginForm() {
     const { currentUser, handleUpdateUser } = useUserContext();
